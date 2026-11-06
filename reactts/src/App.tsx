@@ -5,6 +5,7 @@ import { Counter } from './components/Counter.tsx'
 import type { Chai } from './types.ts';
 import { ChaiList } from './components/ChaiList.tsx';
 import { OrderForm } from './components/OrderForm.tsx';
+import Card from './components/Card.tsx';
 
 const menu: Chai[] = [
   {id: 1, name: "Masala", price: 25},
@@ -41,6 +42,13 @@ const App = () => {
         onSubmit={(order) =>{
           console.log("Placed", order.name, order.cups);
         }} 
+      />
+    </div>
+
+    <div>
+      <Card
+        title="Chai with typesScript"
+        footer={<button>Order Now</button>} // we need to give react node 
       />
     </div>
     </>
